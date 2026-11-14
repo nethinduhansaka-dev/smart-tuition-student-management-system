@@ -408,13 +408,21 @@ The project proposal identifies a **28-week schedule** covering these major phas
 ---
 
 # 🌿 GitHub Repository
-
+ 
 This repository will be used to maintain the source code, project documentation, diagrams, testing materials, and other development artifacts throughout the project.
-
+ 
 The team will use **Git and GitHub** for version control and collaboration.
-
+ 
+### Repository Layout
+ 
+```text
+.
+├── README.md
+└── frontend/   # React + Vite frontend application
+```
+ 
 ### Branch Structure
-
+ 
 ```text
 main
 │
