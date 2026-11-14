@@ -413,6 +413,8 @@ This repository will be used to maintain the source code, project documentation,
 
 The team will use **Git and GitHub** for version control and collaboration.
 
+For contribution, branching, review, and project board process details, refer to [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
 ### Branch Structure
 
 ```text
