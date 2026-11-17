@@ -1,0 +1,113 @@
+:root {
+  color-scheme: light;
+  --page-bg: #ededed;
+  --surface: #f4f5f2;
+  --sidebar-bg: #f4f5f2;
+  --header-bg: #f4f5f2;
+  --card: #ffffff;
+  --elevated: #ffffff;
+  --hover: #dcece0;
+  --text: #1e2420;
+  --muted: #657168;
+  --border: #e1e7e0;
+  --strong-border: #8b9d91;
+  --green: #1d6d40;
+  --solid-accent: #1d6d40;
+  --accent-ink: #145538;
+  --accent-soft: #dcece0;
+  --pale: var(--accent-soft);
+  --muted-surface: #edf1eb;
+  --success-text: #166534;
+  --success-bg: #e1f2e7;
+  --warning-text: #8c5c0c;
+  --warning-bg: #fff0d8;
+  --danger-text: #b83232;
+  --danger-bg: #fff0f0;
+  --blue-text: #4258ad;
+  --blue-bg: #e9edff;
+  --purple-text: #77519d;
+  --purple-bg: #eee5fb;
+  --chart-0: #a9d9b5;
+  --chart-1: #2e9058;
+  --chart-2: #0e3d25;
+  --chart-line: #287a4c;
+  --chart-area: #b6d9bc;
+}
+
+:root.dark {
+  color-scheme: dark;
+  --gradient: linear-gradient(135deg, #176b41, #145a37);
+  --page-bg: #080909;
+  --surface: #080909;
+  --sidebar-bg: #0b0b0c;
+  --header-bg: #0b0b0c;
+  --card: #111213;
+  --elevated: #17191a;
+  --hover: #1b1d1f;
+  --text: #f5f6f5;
+  --muted: #a0a4a2;
+  --muted-text: #747a77;
+  --border: #292b2d;
+  --strong-border: #555b57;
+  --green: #32d583;
+  --solid-accent: #145a37;
+  --accent-ink: #7de4ad;
+  --accent-soft: rgb(50 213 131 / 12%);
+  --muted-surface: #17191a;
+  --success-text: #80dda8;
+  --success-bg: #102b1d;
+  --warning-text: #ecc17b;
+  --warning-bg: #302515;
+  --danger-text: #f4a0a0;
+  --danger-bg: #331e22;
+  --blue-text: #b2c4ff;
+  --blue-bg: #1b252c;
+  --purple-text: #d4b6f3;
+  --purple-bg: #2a2230;
+  --chart-0: #84dfac;
+  --chart-1: #32d583;
+  --chart-2: #258d58;
+  --chart-line: #32d583;
+  --chart-area: #17472f;
+}
+
+/* Charcoal surfaces and quiet separation; emerald is reserved for emphasis. */
+.dark .app-shell {
+  --panel-shadow: inset 0 0 0 1px var(--border), 0 2px 4px rgb(0 0 0 / 10%);
+}
+.dark .stat-featured { background: var(--card); color: var(--text); }
+.dark .stat-featured small { color: var(--muted); }
+.dark .stat-featured .stat-icon { background: var(--accent-soft); color: var(--green); }
+.dark .stat-featured .stat-arrow { background: var(--elevated); color: var(--text); border-color: var(--border); }
+.dark .field input, .dark .field select, .dark .field textarea,
+.dark .password-input, .dark .search-box { background: var(--elevated); border-color: var(--border); }
+.dark .icon-button { background: var(--elevated); }
+.dark .icon-button:hover, .dark nav a:hover:not(.active), .dark tbody tr:hover {
+  color: var(--text);
+  background: var(--hover);
+}
+.dark .search-results, .dark .modal { box-shadow: inset 0 0 0 1px var(--border), 0 6px 16px rgb(0 0 0 / 20%); }
+
+/* Existing semantic utility colors also respond without page-specific copies. */
+.text-red-500 { color: var(--danger-text); }
+.text-green-700, .text-green-800 { color: var(--accent-ink); }
+input::placeholder, textarea::placeholder { color: var(--muted); opacity: .85; }
+input, select, textarea { color: var(--text); }
+option { background: var(--card); color: var(--text); }
+.modal { background: var(--card); }
+
+/* Transition actual surfaces/controls, not layout geometry or every descendant. */
+body, .app-shell, .desktop-sidebar, .app-header, .page-content, .card, .stat,
+.modal, .mobile-drawer, .portal-frame, .portal-inner, .portal-card,
+.auth-frame, .auth-form-panel, .legacy-about, input, select, textarea,
+.button, .icon-button, nav a, .status, .search-box, .search-results {
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+.icon-button:hover { background-color: var(--accent-soft); }
+nav a:hover:not(.active) { color: var(--accent-ink); background: var(--accent-soft); }
+@media (prefers-reduced-motion: reduce) {
+  body, .app-shell, .desktop-sidebar, .app-header, .page-content, .card, .stat,
+  .modal, .mobile-drawer, .portal-frame, .portal-inner, .portal-card,
+  .auth-frame, .auth-form-panel, .legacy-about, input, select, textarea,
+  .button, .icon-button, nav a, .status, .search-box, .search-results { transition: none; }
+}
